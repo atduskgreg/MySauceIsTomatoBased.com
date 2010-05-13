@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>My Sauce Is Tomato Based</title>
+  </head>
+  <style>
+  body {
+    border: none;
+    padding: 0;
+    margin: 0;  
+    background-color: #eee;
+
+  }
+  #theImage {
+    height:100%;
+  }
+
+
+  #main {
+    text-align:center;
+    height: 600px;
+  }
+  
+  #credits {
+    padding: 10px;
+    color: #aaa;
+    background-color: #eee;
+    margin:0;
+  }
+  
+  #credits a {
+    color: #666;
+  }
+  </style>
+  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    photos = [{'url' : "art/1.png", 'color' : '#33170E', 'align' : 'left'},
+              {'url' : "art/2.png", 'color' : '#647E8F', 'align' : 'right'},  
+              {'url' : "art/3.png", 'color' : '#A0B6C7', 'align' : 'right'}, 
+              {'url' : "art/4.png", 'color' : '#E1E2E2', 'align' : 'left'},
+              {'url' : "art/5.png", 'color' : '#C4D0DF', 'align' : 'left'},
+              {'url' : "art/6.png", 'color' : '#004D84', 'align' : 'left'},
+              {'url' : "art/7.png", 'color' : '#D1C8C9', 'align' : 'left'},
+              {'url' : "art/8.png", 'color' : '#EFF0F2', 'align' : 'left'},
+              {'url' : "art/9.png", 'color' : '#B3C6BE', 'align' : 'left'}
+
+              ];
+    
+    var i = Math.floor(Math.random()*(photos.length));
+    photo = photos[i]
+
+    $("#theImage").attr('src', photo.url);
+    $("#theImage").attr('align', photo.align);
+    $("#main").css('background-color', photo.color);
+    
+    
+  });
+</script>
+  
+  <body>
+    
+    <div id="main"><img id="theImage" /></div>
+    <p id="credits">
+      <em>Photos by <a href="http://flickr.com/adelcambre">Andy Delcambre</a>. Site by <a href="http://ideasfordozens.com">Greg Borenstein</a>. Luckiestmonkey by <a href="http://twitter.com/luckiestmonkey">Melissa</a>.</em>
+    </p>
+  </body>
+</html>
